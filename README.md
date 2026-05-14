@@ -52,7 +52,7 @@ A complete, production-ready e-commerce web application built with the MERN stac
 ### Option 1: Docker (Recommended)
 
 ```bash
-git clone <your-repo>
+git clone <https://github.com/mansoorKhan39/exclusive-ecommerce>
 cd exclusive
 docker-compose up --build
 ```

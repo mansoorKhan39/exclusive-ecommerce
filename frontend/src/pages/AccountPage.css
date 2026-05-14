@@ -1,0 +1,101 @@
+.account-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.account-welcome { font-size: 14px; }
+
+.account-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Sidebar */
+.account-sidebar { display: flex; flex-direction: column; gap: 24px; }
+.sidebar-section { display: flex; flex-direction: column; gap: 4px; }
+.sidebar-group-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-family: var(--font-main);
+}
+.sidebar-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  width: 100%;
+}
+.sidebar-tab-btn:hover { color: var(--text-primary); background: var(--bg-secondary); }
+.sidebar-tab-btn.active { color: var(--primary); font-weight: 600; }
+
+/* Content */
+.account-content { min-height: 400px; }
+.tab-title { font-size: 22px; font-weight: 700; color: var(--primary); margin-bottom: 28px; font-family: var(--font-main); }
+.tab-placeholder { padding: 20px 0; }
+
+/* Profile */
+.profile-form { display: flex; flex-direction: column; gap: 20px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-label { font-size: 14px; font-weight: 500; }
+.profile-section-title { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-top: 8px; }
+.profile-form-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 8px; }
+
+/* Orders */
+.orders-empty {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  padding: 60px 20px; text-align: center; color: var(--text-muted);
+}
+.orders-empty h3 { font-size: 20px; color: var(--text-primary); }
+.orders-list { display: flex; flex-direction: column; gap: 16px; }
+.order-card {
+  border: 1px solid var(--border-light); border-radius: var(--radius-md);
+  overflow: hidden; transition: var(--transition);
+}
+.order-card:hover { box-shadow: var(--shadow-md); }
+.order-card-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px; background: var(--bg-secondary);
+}
+.order-id { font-weight: 700; font-size: 14px; }
+.order-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.order-status-badge {
+  padding: 4px 12px; border-radius: 20px; color: #fff;
+  font-size: 12px; font-weight: 600;
+}
+.order-card-items { padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; }
+.order-card-item { display: flex; align-items: center; gap: 12px; }
+.order-card-item img {
+  width: 48px; height: 48px; object-fit: contain;
+  background: var(--bg-secondary); border-radius: 4px; padding: 4px;
+  flex-shrink: 0;
+}
+.order-item-name { font-size: 14px; font-weight: 500; }
+.order-item-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.order-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 20px; border-top: 1px solid var(--border-light);
+  font-size: 14px;
+}
+.order-payment { color: var(--text-secondary); font-size: 13px; }
+
+@media (max-width: 768px) {
+  .account-layout { grid-template-columns: 1fr; }
+  .account-sidebar { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .sidebar-section { flex-direction: row; flex-wrap: wrap; gap: 4px; }
+  .sidebar-group-title { display: none; }
+  .form-row-2 { grid-template-columns: 1fr; }
+}

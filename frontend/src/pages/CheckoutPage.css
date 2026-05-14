@@ -1,0 +1,57 @@
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: start;
+}
+
+.billing-form { display: flex; flex-direction: column; gap: 20px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-label { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+.required { color: var(--primary); margin-left: 2px; }
+.form-checkbox {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 14px; color: var(--text-primary); cursor: pointer;
+}
+.form-checkbox input { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
+
+/* Order Summary */
+.order-summary { display: flex; flex-direction: column; gap: 20px; }
+.order-items { display: flex; flex-direction: column; gap: 16px; }
+.order-item { display: flex; align-items: center; gap: 16px; }
+.order-item-img { position: relative; flex-shrink: 0; }
+.order-item-img img {
+  width: 54px; height: 54px; object-fit: contain;
+  background: var(--bg-secondary); border-radius: 4px; padding: 4px;
+}
+.order-item-qty {
+  position: absolute; top: -6px; right: -6px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--primary); color: #fff; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.order-item-name { flex: 1; font-size: 14px; font-weight: 500; }
+.order-item-price { font-weight: 600; font-size: 14px; }
+
+.order-totals { display: flex; flex-direction: column; gap: 12px; }
+.order-total-row { display: flex; justify-content: space-between; font-size: 14px; }
+.order-divider { height: 1px; background: var(--border-light); }
+
+.payment-methods { display: flex; flex-direction: column; gap: 12px; }
+.payment-option {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 14px; cursor: pointer; font-weight: 500;
+}
+.payment-option input { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
+.payment-icons { display: flex; gap: 6px; margin-left: auto; }
+.pay-icon { font-size: 20px; }
+
+.checkout-coupon { display: flex; gap: 12px; }
+
+@media (max-width: 1024px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .form-row-2 { grid-template-columns: 1fr; }
+}

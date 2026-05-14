@@ -1,0 +1,38 @@
+.announcement-bar {
+  background: var(--bg-dark);
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+}
+.announcement-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.announcement-link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-left: 4px;
+  transition: var(--transition);
+}
+.announcement-link:hover { color: var(--primary); }
+.announcement-lang {
+  position: absolute;
+  right: 24px;
+}
+.announcement-lang select {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  font-family: var(--font-body);
+}
+.announcement-lang option { background: #333; color: #fff; }

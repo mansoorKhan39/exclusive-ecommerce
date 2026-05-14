@@ -1,0 +1,76 @@
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+.product-detail-images { display: flex; gap: 16px; }
+.product-thumbnails { display: flex; flex-direction: column; gap: 12px; }
+.thumb-btn {
+  width: 80px; height: 80px; border: 2px solid transparent; border-radius: var(--radius-sm);
+  overflow: hidden; background: var(--bg-secondary); cursor: pointer; transition: var(--transition);
+  padding: 4px;
+}
+.thumb-btn.active { border-color: var(--primary); }
+.thumb-btn img { width: 100%; height: 100%; object-fit: contain; }
+.product-main-image {
+  flex: 1; background: var(--bg-secondary); border-radius: var(--radius-md);
+  position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;
+  min-height: 400px;
+}
+.product-main-image img { width: 100%; height: 100%; object-fit: contain; padding: 24px; max-height: 400px; }
+.product-badge { position: absolute; top: 12px; left: 12px; }
+
+.detail-name { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+.detail-rating-row { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border-light); }
+.detail-stock { font-size: 14px; font-weight: 500; }
+.detail-price { font-size: 28px; font-weight: 700; color: var(--primary); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.detail-original-price { font-size: 20px; color: var(--text-muted); text-decoration: line-through; }
+.detail-description { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
+.detail-divider { height: 1px; background: var(--border-light); margin: 16px 0; }
+.detail-option-row { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.detail-option-label { font-weight: 600; font-size: 15px; white-space: nowrap; }
+.detail-colors { display: flex; gap: 8px; }
+.detail-color-btn {
+  width: 24px; height: 24px; border-radius: 50%; border: 3px solid transparent;
+  cursor: pointer; transition: var(--transition);
+}
+.detail-color-btn.active { border-color: var(--text-primary); transform: scale(1.1); }
+.detail-sizes { display: flex; gap: 8px; }
+.detail-size-btn {
+  padding: 6px 14px; border: 1px solid var(--border); border-radius: 4px;
+  background: #fff; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: var(--transition); font-family: var(--font-body);
+}
+.detail-size-btn:hover { border-color: var(--primary); color: var(--primary); }
+.detail-size-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.detail-buy-row { display: flex; align-items: center; gap: 12px; margin-top: 24px; }
+.qty-control { display: flex; align-items: center; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
+.qty-btn {
+  background: none; border: none; padding: 10px 14px; cursor: pointer;
+  display: flex; align-items: center; transition: var(--transition); color: var(--text-primary);
+}
+.qty-btn:hover:not(:disabled) { background: var(--primary); color: #fff; }
+.qty-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.qty-value { padding: 0 16px; font-weight: 600; font-size: 15px; }
+.detail-wish-btn {
+  width: 44px; height: 44px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: #fff; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--text-primary); transition: var(--transition); flex-shrink: 0;
+}
+.detail-wish-btn:hover, .detail-wish-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.detail-delivery { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; margin-top: 20px; }
+.delivery-item { display: flex; align-items: center; gap: 16px; }
+.delivery-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.delivery-item p { font-size: 12px; color: var(--text-secondary); }
+.delivery-item a { text-decoration: underline; color: inherit; }
+
+@media (max-width: 1024px) {
+  .product-detail-grid { grid-template-columns: 1fr; gap: 40px; }
+  .product-detail-images { max-width: 500px; }
+}
+@media (max-width: 480px) {
+  .product-thumbnails { flex-direction: row; }
+  .product-detail-images { flex-direction: column; }
+  .thumb-btn { width: 64px; height: 64px; }
+}

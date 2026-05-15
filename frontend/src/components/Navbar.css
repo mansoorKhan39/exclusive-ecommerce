@@ -63,7 +63,9 @@
   gap: 8px;
   transition: var(--transition);
 }
-.navbar-search:focus-within { box-shadow: 0 0 0 2px rgba(219,68,68,0.2); }
+.navbar-search:focus {
+  box-shadow: 0 0 0 2px rgba(219,68,68,0.2);
+}
 .navbar-search-input {
   border: none;
   background: transparent;

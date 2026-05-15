@@ -1,0 +1,8 @@
+{
+  "short_name": "Exclusive",
+  "name": "Exclusive - Online Shopping",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#DB4444",
+  "background_color": "#ffffff"
+}

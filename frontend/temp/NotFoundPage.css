@@ -1,0 +1,18 @@
+.notfound-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+  gap: 20px;
+}
+.notfound-title {
+  font-size: clamp(48px, 10vw, 96px);
+  font-weight: 800;
+  font-family: var(--font-main);
+  letter-spacing: -2px;
+}
+.notfound-desc { font-size: 16px; color: var(--text-secondary); }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9wYWdlcy9Ob3RGb3VuZFBhZ2UuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Ik5vdEZvdW5kUGFnZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubm90Zm91bmQtY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBtaW4taGVpZ2h0OiA1MHZoO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGdhcDogMjBweDtcbn1cbi5ub3Rmb3VuZC10aXRsZSB7XG4gIGZvbnQtc2l6ZTogY2xhbXAoNDhweCwgMTB2dywgOTZweCk7XG4gIGZvbnQtd2VpZ2h0OiA4MDA7XG4gIGZvbnQtZmFtaWx5OiB2YXIoLS1mb250LW1haW4pO1xuICBsZXR0ZXItc3BhY2luZzogLTJweDtcbn1cbi5ub3Rmb3VuZC1kZXNjIHsgZm9udC1zaXplOiAxNnB4OyBjb2xvcjogdmFyKC0tdGV4dC1zZWNvbmRhcnkpOyB9XG4iXX0= */

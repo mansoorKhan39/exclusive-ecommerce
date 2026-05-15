@@ -16,8 +16,16 @@
 .cart-table-wrap { grid-column: 1; }
 .cart-table { width: 100%; border-collapse: separate; border-spacing: 0; box-shadow: var(--shadow-sm); border-radius: var(--radius-md); overflow: hidden; }
 .cart-table th {
-  background: #fff; border: 1px solid var(--border-light); padding: 16px 20px;
-  font-size: 14px; font-weight: 600; text-align: left; first-child:{ border-radius: 8px 0 0 0; }
+  background: #fff;
+  border: 1px solid var(--border-light);
+  padding: 16px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.cart-table th:first-child {
+  border-radius: 8px 0 0 0;
 }
 .cart-table td { border: 1px solid var(--border-light); padding: 16px 20px; vertical-align: middle; }
 .cart-product-info { display: flex; align-items: center; gap: 16px; }

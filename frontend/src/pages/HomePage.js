@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import iphone14 from "../assets/iphone14.jpg";
 import { Link } from 'react-router-dom';
 import { FaApple } from "react-icons/fa";
 import { ChevronLeft, ChevronRight, ArrowRight, Truck, Headphones, ShieldCheck } from 'lucide-react';
@@ -47,7 +48,7 @@ const CountdownTimer = ({ endDate }) => {
 const HeroBanner = () => {
   const [slide, setSlide] = useState(0);
   const slides = [
-    { bg: '#1a1a1a', label: 'iPhone 14 Series', title: 'Up to 10% off Voucher', subtitle: 'Shop the latest iPhone 14 Series', img: '📱' },
+    { bg: '#1a1a1a', label: 'iPhone 14 Series', title: 'Up to 10% off Voucher', subtitle: 'Shop the latest iPhone 14 Series', img: iphone14 },
     { bg: '#0d47a1', label: 'Best Speakers', title: 'Enhance Your Music Experience', subtitle: 'Crystal clear sound, everywhere you go', img: '🔊' },
     { bg: '#1b5e20', label: 'New Arrival', title: 'Shop Our Latest Collection', subtitle: 'Discover trending products at great prices', img: '🛍️' },
   ];
@@ -70,7 +71,7 @@ const HeroBanner = () => {
           </Link>
         </div>
         <div className="hero-image">
-          <span style={{ fontSize: '160px' }}>{slides[slide].img}</span>
+          <img src={slides[slide].img} alt="iPhone 14" />
         </div>
       </div>
       <button className="hero-nav next" onClick={next}><ChevronRight size={24} /></button>

@@ -11,33 +11,59 @@
 .sidebar-cat-link:hover { color: var(--primary); background: var(--primary-light); }
 
 /* Hero Banner */
+
 .hero-banner {
   position: relative;
   height: 340px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-radius: 8px;
-  background: #000;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #0b0b0b 0%, #161616 100%);
+  padding: 40px 0;
 }
-.hero-content { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0 60px; }
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 70px;
+  gap: 40px;
+}
 .hero-text { flex: 1; }
-.hero-label { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.hero-label { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 .hero-title {
-  font-size: 56px;
+  font-size: 46px;
   font-weight: 700;
+  line-height: 0.9;
   color: #fff;
-  line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
+  max-width: 620px;
+  letter-spacing: -2px;
 }
-.hero-subtitle { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 24px; }
+.hero-subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 32px;
+}
 .hero-cta {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: #fff; color: var(--text-primary);
-  padding: 12px 24px; border-radius: 4px; font-weight: 600; font-size: 14px;
-  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #111;
+  padding: 16px 34px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.3s ease;
 }
-.hero-cta:hover { background: var(--primary); color: #fff; }
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  background: var(--primary);
+  color: white;
+}
 .hero-image {
   flex: 1;
   display: flex;
@@ -157,4 +183,15 @@
   .category-grid { grid-template-columns: repeat(2, 1fr); }
   .arrival-bottom { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

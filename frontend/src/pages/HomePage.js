@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaApple } from "react-icons/fa";
 import { ChevronLeft, ChevronRight, ArrowRight, Truck, Headphones, ShieldCheck } from 'lucide-react';
 import { getProducts } from '../services/api';
 import ProductCard from '../components/ProductCard';
@@ -58,7 +59,10 @@ const HeroBanner = () => {
       <button className="hero-nav prev" onClick={prev}><ChevronLeft size={24} /></button>
       <div className="hero-content animate-fade-in" key={slide}>
         <div className="hero-text">
-          <p className="hero-label">{slides[slide].label}</p>
+          <p className="hero-label">
+            <FaApple size={32} />
+            {slides[slide].label}
+          </p>
           <h1 className="hero-title">{slides[slide].title}</h1>
           <p className="hero-subtitle">{slides[slide].subtitle}</p>
           <Link to="/shop" className="hero-cta">

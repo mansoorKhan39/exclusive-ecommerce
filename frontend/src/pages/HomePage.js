@@ -58,7 +58,7 @@ const HeroBanner = () => {
       <button className="hero-nav prev" onClick={prev}><ChevronLeft size={24} /></button>
       <div className="hero-content animate-fade-in" key={slide}>
         <div className="hero-text">
-          <p className="hero-label">🍎 {slides[slide].label}</p>
+          <p className="hero-label">{slides[slide].label}</p>
           <h1 className="hero-title">{slides[slide].title}</h1>
           <p className="hero-subtitle">{slides[slide].subtitle}</p>
           <Link to="/shop" className="hero-cta">

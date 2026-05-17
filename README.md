@@ -3,6 +3,7 @@
 A complete, production-ready e-commerce web application built with the MERN stack, faithfully recreating the **Exclusive** Figma design with all 13 pages.
 
 ---
+## 🌐 Live Demo: https://exclusive-ecommerce-maah.vercel.app/
 
 ## 📸 Pages Implemented
 

@@ -16,7 +16,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://exclusive-ecommerce-two-lemon.vercel.app'
+    'https://exclusive-ecommerce-maah.vercel.app'
   ],
   credentials: true
 }));

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Iphone14 from "../assets/Iphone14.png";
+import Iphone14 from "../assets/iphone14.png";
 import { Link } from 'react-router-dom';
 import { FaApple } from "react-icons/fa";
 import { ChevronLeft, ChevronRight, ArrowRight, Truck, Headphones, ShieldCheck } from 'lucide-react';

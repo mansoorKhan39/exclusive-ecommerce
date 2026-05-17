@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import ProductCard from '../components/ProductCard';
 import { StarRating } from '../components/ProductCard';
+import ReviewSection from '../components/ReviewSection';
 import toast from 'react-hot-toast';
 import './ProductDetailPage.css';
 
@@ -199,6 +200,12 @@ const ProductDetailPage = () => {
           </div>
         </section>
       )}
+
+      <ReviewSection
+        productId={id}
+        reviews={product.reviews || []}
+        onReviewAdded={() => getProduct(id).then(res => setProduct(res.data))}
+      />
     </div>
   );
 };

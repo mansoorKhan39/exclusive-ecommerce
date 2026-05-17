@@ -107,6 +107,11 @@ const Navbar = () => {
               </button>
               {accountOpen && (
                 <div className="nav-dropdown account-dropdown animate-fade-in">
+                  {user?.role === 'admin' && (
+                    <Link to="/admin" className="nav-dropdown-item" style={{ color: 'var(--primary)' }}>
+                      <Settings size={15} /> Admin Panel
+                    </Link>
+                  )}
                   <Link to="/account" className="nav-dropdown-item">
                     <User size={15} /> My Profile
                   </Link>

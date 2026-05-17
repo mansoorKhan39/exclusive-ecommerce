@@ -1,0 +1,68 @@
+.review-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-light);
+}
+.review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.review-title { font-size: 22px; font-weight: 700; font-family: var(--font-main); margin-bottom: 8px; }
+.review-summary { display: flex; align-items: center; gap: 10px; }
+.review-avg { font-size: 32px; font-weight: 800; color: var(--accent); font-family: var(--font-main); }
+.review-count-text { font-size: 14px; color: var(--text-muted); }
+
+.review-form {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.review-form h3 { font-size: 16px; font-weight: 700; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-label { font-size: 14px; font-weight: 500; }
+.review-textarea { min-height: 100px; resize: vertical; background: #fff; }
+.review-form-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+.star-picker { display: flex; gap: 4px; }
+.star-pick-btn {
+  background: none; border: none; cursor: pointer; padding: 2px;
+  transition: transform 0.15s; display: flex; align-items: center;
+}
+.star-pick-btn:hover { transform: scale(1.2); }
+
+.no-reviews {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  padding: 48px 20px; text-align: center; color: var(--text-muted);
+}
+.no-reviews p { font-size: 15px; }
+
+.reviews-list { display: flex; flex-direction: column; gap: 16px; }
+.review-card {
+  padding: 20px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+.review-card:hover { box-shadow: var(--shadow-sm); }
+.review-card-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+}
+.reviewer-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--primary); color: #fff;
+  font-weight: 700; font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.reviewer-name { font-size: 14px; font-weight: 600; }
+.review-date { font-size: 12px; color: var(--text-muted); }
+.review-stars { display: flex; gap: 2px; margin-left: auto; }
+.review-comment { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }

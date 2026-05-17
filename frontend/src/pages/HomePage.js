@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Iphone14 from "../assets/iphone14.png";
+import SpeakerImg from "../assets/speaker.png";
+import gamingSetup from "../assets/gamingSetup.png";
 import { Link } from 'react-router-dom';
 import { FaApple } from "react-icons/fa";
 import { ChevronLeft, ChevronRight, ArrowRight, Truck, Headphones, ShieldCheck } from 'lucide-react';
@@ -49,8 +51,14 @@ const HeroBanner = () => {
   const [slide, setSlide] = useState(0);
   const slides = [
     { bg: '#000', label: 'iPhone 14 Series', title: 'Up to 10% off Voucher', subtitle: 'Shop the latest iPhone 14 Series', img: Iphone14 },
-    { bg: '#0d47a1', label: 'Best Speakers', title: 'Enhance Your Music Experience', subtitle: 'Crystal clear sound, everywhere you go', img: '🔊' },
-    { bg: '#1b5e20', label: 'New Arrival', title: 'Shop Our Latest Collection', subtitle: 'Discover trending products at great prices', img: '🛍️' },
+    {
+        bg: '#0d47a1',
+        label: 'Best Speakers',
+        title: 'Enhance Your Music Experience',
+        subtitle: 'Crystal clear sound, everywhere you go',
+        img: SpeakerImg
+    },
+    { bg: '#1b5e20', label: 'New Arrival', title: 'Shop Our Latest Collection', subtitle: 'Discover trending products at great prices', img: gamingSetup },
   ];
   const next = () => setSlide(s => (s + 1) % slides.length);
   const prev = () => setSlide(s => (s - 1 + slides.length) % slides.length);
